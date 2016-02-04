@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<head>
+		<title>angular</title>
+		<script src="js/angular.js"></script>
+		<style>
+			ul {
+				width: 40%;
+				margin: 0 auto;
+				text-align: center;
+				margin-top: 100px;
+				padding: 0;
+			}
+			ul li {
+				list-style-type: none;
+				padding: 10px;
+				background: #ccc;
+				margin-bottom: 10px;
+			}
+
+			ul li a {
+				text-decoration: none;
+				font-size: 24px;
+				color: #000;
+				font-family: arial;
+			}
+			ul.subdropdown {
+				margin-top: 10px;
+				width: 100%;
+				display: none;
+			}
+			ul.subdropdown li {
+				background: #fff;
+			}
+			.test {
+				display: block !important;
+			}
+			@media (max-width:767px) {
+				ul {
+					width: 100%;
+				}
+				ul li a {
+					font-size: 18px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+
+		<!-- <div data-ng-app="">
+			<p>Name: <input type="text" data-ng-model="value"></p>
+			<p data-ng-bind="value"></p>
+		</div> -->
+
+		<!-- <div data-ng-app="" data-ng-init="firstName='Rameshwar'">
+			<p>The name is <span data-ng-bind="firstName"></span></p>
+		</div> -->
+
+		<!-- <div data-ng-app="">
+			<p>The expression is <input type="text" data-ng-model="name"></p>
+			<p>{{ name + " " + name }}</p>
+		</div> -->
+
+		<!-- <div data-ng-app="myapp" data-ng-controller="mycontrol">
+			<p>First Name: <input type="text" data-ng-model="firstName"></p>
+			<p>Last Name: <input type="text" data-ng-model="LastName"></p>
+			<p>Full Name: {{firstName + " " + LastName}}</p>
+		</div> -->
+
+		<!-- <div data-ng-app="" data-ng-init="quantity=5; cost=25">
+			<p>total amount is {{ quantity * cost }}</p>
+			<p>total amount is <span data-ng-bind="quantity * cost"></span></p>
+		</div> -->
+
+		<!-- <div data-ng-app="" data-ng-init="FirstName='Rahul';LastName='Singh'">
+			<p> Full Name is {{ FirstName + " " + LastName }}</p>
+			<p> Full Name is <span data-ng-bind="FirstName + ' ' + LastName"></span></p>
+		</div> -->
+
+		<!-- <div data-ng-app="" data-ng-init="person={firstname:'rahul',lastname:'singh'}">
+			<p>Last name is {{person.lastname}}</p>
+			<p>First name is <span data-ng-bind="person.firstname"></span></p>
+		</div> -->
+
+		<!-- <div data-ng-app="" data-ng-init="pointer=[100,400,500,39,59]">
+			<p>position of pointer is {{pointer[1]}}</p>
+			<p>position of pointer is <span data-ng-bind="pointer[4]"></span></p>
+		</div> -->
+
+		<!-- <div data-ng-app="myapp" data-ng-controller="my-ctrl">
+			<p>{{height * length}}</p>
+		</div> -->
+
+		<!-- <div data-ng-app="" data-ng-init="height=10; width=20">
+			<p>height is <input type="number" data-ng-model="height"></p>
+			<p>width is <input type="number" data-ng-model="width"></p>
+			<p>combination of both is {{height * width}}</p>
+			<p>combination of both is <span data-ng-bind="height * width"></span></p>
+		</div> -->
+
+		<!-- <div data-ng-app="" data-ng-init="Girls=['rekha','jaya','sushma','hema']">
+			<p>girls name repeated again and again</p>
+			<ul>
+				<li data-ng-repeat="x in Girls">
+					{{x}}
+				</li>
+			</ul>
+		</div> -->
+
+		<!-- <div data-ng-app="" data-ng-init="details=[
+		{title:'singh',name:'rahul'}, 
+		{title:'thakur',name:'ram'},
+		{title:'kurmi',name:'jyotish'}]">
+			<p>details repeated again and again</p>
+			<ul>
+				<li data-ng-repeat="x in details">
+					{{ x.title +','+ x.name }}
+				</li>
+			</ul>
+		</div> -->
+
+		<ul>
+			<li>
+				<a href="#">First Link With DropDown</a>
+				<ul class="subdropdown" >
+					<li><a href="#">Third Link With SubDropDown</a></li>
+					<li><a href="#">Third Link With SubDropDown</a></li>
+					<li><a href="#">Third Link With SubDropDown</a></li>
+					<li><a href="#">Third Link With SubDropDown</a></li>
+					<li><a href="#">Third Link With SubDropDown</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Second Link With DropDown</a>
+				<ul class="subdropdown" >
+					<li><a href="#">Third Link With SubDropDown</a></li>
+					<li><a href="#">Third Link With SubDropDown</a></li>
+					<li><a href="#">Third Link With SubDropDown</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Third Link With DropDown</a>
+				<ul class="subdropdown" >
+					<li><a href="#">Third Link With SubDropDown</a></li>
+					<li><a href="#">Third Link With SubDropDown</a></li>
+					<li><a href="#">Third Link With SubDropDown</a></li>
+					<li><a href="#">Third Link With SubDropDown</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Fourth Link With DropDown</a>
+			</li>
+			<li>
+				<a href="#">Fifth Link With DropDown</a>
+				<ul class="subdropdown" >
+					<li><a href="#">Third Link With SubDropDown</a></li>
+					<li><a href="#">Third Link With SubDropDown</a></li>
+					<li><a href="#">Third Link With SubDropDown</a></li>
+					<li><a href="#">Third Link With SubDropDown</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Sixth Link With DropDown</a>
+				<ul class="subdropdown" >
+					<li><a href="#">Third Link With SubDropDown</a></li>
+					<li><a href="#">Third Link With SubDropDown</a></li>
+				</ul>
+			</li>
+		</ul>
+
+		<script src="js/jquery-1.12.0.min.js"></script>
+		<script src="js/jquerycustom.js"></script>
+	</body>
+</html>
